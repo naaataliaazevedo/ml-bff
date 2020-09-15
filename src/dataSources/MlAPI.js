@@ -25,9 +25,8 @@ class MlAPI extends RESTDataSource {
     return mockedResponse;
   }
 
-  async getProductSearch() {
-    return this.get(`${ML_API_URL}/sites/MLA/search?q=:query`);
-    // return this.get()`${ML_API_URL}/sites/MLA/search?q=:${query}`);
+  async getProductSearch({ query }) {
+    return this.get(`${ML_API_URL}/sites/MLA/search?q=:${query}`);
   }
 }
 

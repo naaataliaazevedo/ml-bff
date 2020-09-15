@@ -11,6 +11,11 @@ type Search {
 #   search: ProductList
 # }
 
+input ProductInput {
+  query: String
+}
+
+
 extend type Query {
-  search: [Search]
+  search(input: ProductInput): [Search]
 }
