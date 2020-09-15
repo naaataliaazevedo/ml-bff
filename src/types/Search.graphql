@@ -1,9 +1,16 @@
 type Search {
-  # lastName: String
-  # author: String
-  query: String
+  id: String
+  title: String
 }
 
+# type ProductList {
+#   product: [Search]
+# }
+
+# extend type Query {
+#   search: ProductList
+# }
+
 extend type Query {
-  search: Search
+  search: [Search]
 }
