@@ -1,6 +1,6 @@
 const { RESTDataSource } = require("apollo-datasource-rest");
 
-const { SORTING_HAT_URL } = require("../config");
+const { ML_API_URL } = require("../config");
 
 const mockedResponse = {
   books: [
@@ -18,11 +18,16 @@ const mockedResponse = {
 class MlAPI extends RESTDataSource {
   constructor() {
     super();
-    // this.baseURL = SORTING_HAT_URL;
+    this.baseURL = ML_API_URL;
   }
 
   getUserPlanOffers() {
     return mockedResponse;
+  }
+
+  async getProductSearch() {
+    return this.get(`${ML_API_URL}/sites/MLA/search?q=:query`);
+    // return this.get()`${ML_API_URL}/sites/MLA/search?q=:${query}`);
   }
 }
 

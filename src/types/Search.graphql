@@ -1,0 +1,9 @@
+type Search {
+  # lastName: String
+  # author: String
+  query: String
+}
+
+extend type Query {
+  search: Search
+}
