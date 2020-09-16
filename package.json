@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
+   "author": "Natália Azevedo",
   "dependencies": {
     "apollo-server": "^2.17.0",
     "graphql": "^15.3.0",

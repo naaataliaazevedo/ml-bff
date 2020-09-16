@@ -1,15 +1,8 @@
 type Search {
   id: String
   title: String
+  condition: String
 }
-
-# type ProductList {
-#   product: [Search]
-# }
-
-# extend type Query {
-#   search: ProductList
-# }
 
 input ProductInput {
   query: String
