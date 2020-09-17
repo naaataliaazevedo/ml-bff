@@ -2,12 +2,18 @@ type Search {
   id: String
   title: String
   condition: String
+  price: Int
+  thumbnail: String
+  # address: [Address]
 }
 
 input ProductInput {
   query: String
 }
 
+type Address {
+  state_name: String
+}
 
 extend type Query {
   search(input: ProductInput): [Search]
