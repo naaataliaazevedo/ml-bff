@@ -28,6 +28,10 @@ class MlAPI extends RESTDataSource {
   async getProductSearch({ query }) {
     return this.get(`${ML_API_URL}/sites/MLA/search?q=:${query}`);
   }
+
+  async getProductDetails({ id }) {
+    return this.get(`${ML_API_URL}/items/${id}`);
+  }
 }
 
 module.exports = MlAPI;

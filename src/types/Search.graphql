@@ -2,7 +2,7 @@ type Search {
   id: String
   title: String
   condition: String
-  price: Int
+  price: Float
   thumbnail: String
   # address: [Address]
 }
