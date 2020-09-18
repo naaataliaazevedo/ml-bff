@@ -6,4 +6,11 @@ module.exports = {
       return product;
     },
   },
+  // description: async (_, { input }, { dataSources }) => {
+  //   const description = await dataSources.mlAPI.getProductDetailsDescription(input);
+
+  //   console.log(description);
+
+  //   return description.plan_text;
+  // },
 };

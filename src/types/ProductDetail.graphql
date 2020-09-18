@@ -4,6 +4,8 @@ type Product {
   price: Float
   permalink: String
   thumbnail: String
+  sold_quantity: Int
+  condition: String
   pictures: [Pictures]
 }
 

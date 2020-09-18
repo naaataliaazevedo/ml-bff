@@ -1,16 +1,3 @@
-// const gql = require("graphql-tag");
-
-// const books = require('./Books');
-
-// const typeDefs = gql`
-//   type Query {
-//     _empty: String
-//   }
-//   ${books}
-// `;
-
-// module.exports = [typeDefs];
-
 const fs = require("fs");
 
 function typeFilesContentByDirectory(dir) {

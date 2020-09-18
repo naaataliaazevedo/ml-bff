@@ -4,7 +4,8 @@ type Search {
   condition: String
   price: Float
   thumbnail: String
-  # address: [Address]
+  address: Address
+  shipping: Shipping
 }
 
 input ProductInput {
@@ -15,6 +16,12 @@ type Address {
   state_name: String
 }
 
+type Shipping {
+  free_shipping: Int
+}
+
 extend type Query {
   search(input: ProductInput): [Search]
+  address: Address
+  shipping: Shipping
 }
