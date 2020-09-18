@@ -1,12 +1,26 @@
 type Product {
   id: String
   title: String
+  price: Float
+  permalink: String
+  thumbnail: String
+  pictures: [Pictures]
 }
 
-input ProductId {
+type Pictures {
+  id: String
+  url: String
+  secure_url: String
+  size: String
+  max_size: String
+  quality: String
+}
+
+input ProductInputId {
   id: String
 }
 
 extend type Query {
-  product(input: ProductId): [Product]
+  product(input: ProductInputId): Product
+  pictures: [Pictures]
 }
