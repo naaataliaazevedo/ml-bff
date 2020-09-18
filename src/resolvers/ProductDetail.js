@@ -3,14 +3,14 @@ module.exports = {
     product: async (_, { input }, { dataSources }) => {
       const product = await dataSources.mlAPI.getProductDetails(input);
 
-      return product;
+      const author = {
+        name: 'Natália',
+        lastName: 'Azevedo'
+      };
+
+      const formattedData = { ...product, author }
+
+      return formattedData
     },
   },
-  // description: async (_, { input }, { dataSources }) => {
-  //   const description = await dataSources.mlAPI.getProductDetailsDescription(input);
-
-  //   console.log(description);
-
-  //   return description.plan_text;
-  // },
 };

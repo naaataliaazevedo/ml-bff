@@ -22,7 +22,7 @@ input ProductInputId {
   id: String
 }
 
-extend type Query {
+type Query {
   product(input: ProductInputId): Product
   pictures: [Pictures]
 }
