@@ -7,6 +7,7 @@ type Product {
   sold_quantity: Int
   condition: String
   pictures: [Pictures]
+  description: Description
 }
 
 type Pictures {
@@ -18,6 +19,11 @@ type Pictures {
   quality: String
 }
 
+type Description {
+  text: String
+  plain_text: String
+}
+
 input ProductInputId {
   id: String
 }
@@ -25,4 +31,5 @@ input ProductInputId {
 type Query {
   product(input: ProductInputId): Product
   pictures: [Pictures]
+  description: Description
 }
