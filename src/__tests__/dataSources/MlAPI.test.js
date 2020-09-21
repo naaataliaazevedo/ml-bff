@@ -12,7 +12,7 @@ describe('', () => {
 
     await mlAPI.getProductSearch({ query })
     expect(mlAPI.get).toHaveBeenCalledWith(
-      `${ML_API_URL}/sites/MLA/search?q=:${query}`
+      `${ML_API_URL}/sites/MLA/search?q=:${query}&limit=4`
     )
   })
 

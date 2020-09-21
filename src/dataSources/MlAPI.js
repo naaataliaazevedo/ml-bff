@@ -9,7 +9,9 @@ class MlAPI extends RESTDataSource {
   }
 
   async getProductSearch({ query }) {
-    return this.get(`${ML_API_URL}/sites/MLA/search?q=:${query}`);
+    return this.get(
+      `${ML_API_URL}/sites/MLA/search?q=:${query}&limit=4`
+    )
   }
 
   async getProductDetails({ id }) {
